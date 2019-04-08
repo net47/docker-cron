@@ -5,12 +5,12 @@ Based on https://github.com/xordiv/docker-alpine-cron, thx!
 
 #### Environment variables:
 
-CRON_STRINGS - strings with cron jobs. Use "\n" for newline (Default: undefined)   
-CRON_TAIL - if defined cron log file will read to *stdout* by *tail* (Default: undefined)   
-By default cron running in foreground  
-APK_INSTALL - installs specific Alpine APK's
-PIP_INSTALL - installs specific Python PIP packages
-PIP3_INSTALL - installs specific Python3 PIP packages
+**CRON_STRINGS** - strings with cron jobs. Use "\n" for newline (Default: undefined)   
+**CRON_TAIL** - if defined cron log file will read to *stdout* by *tail* (Default: undefined)   
+-> By default cron running in foreground  
+**APK_INSTALL** - installs specific Alpine APK's
+**PIP_INSTALL** - installs specific Python PIP packages
+**PIP3_INSTALL** - installs specific Python3 PIP packages
 
 #### Cron files
 - /etc/cron.d - place to mount custom crontab files  
