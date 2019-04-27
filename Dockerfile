@@ -10,6 +10,8 @@ RUN mkdir -p /tank
 RUN apk add tzdata && cp /usr/share/zoneinfo/Europe/Vienna /etc/localtime && echo "Europe/Vienna" > /etc/timezone && apk del tzdata
 
 COPY /startup/* /
+RUN chmod +x /docker-entry.sh
+RUN chmod +x /docker-cmd.sh
 
 ENTRYPOINT ["/docker-entry.sh"]
 CMD ["/docker-cmd.sh"]
