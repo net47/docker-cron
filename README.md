@@ -41,3 +41,16 @@ docker run -d \
   -v /nfs/docker_conf/exo-ip-updater/some-scripts:/some-scripts \
 MyCompany/cron
 ```
+
+**Google Compute Platform**
+
+There's a specific Dockerfile installing the gcloud tools, you can use it like this:
+```
+docker build --no-cache -f Dockerfile-GCP -t MyCompany/cron:gcp .
+```
+```
+docker run -d \
+  --name="test-gcp" \
+  -v /Users/net47/.config/gcloud:/root/.config/gcloud \
+MyCompany/cron:gcp
+```
