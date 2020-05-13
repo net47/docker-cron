@@ -47,6 +47,9 @@ MyCompany/cron
 There's a specific Dockerfile installing the gcloud tools, you can use it like this:
 ```
 docker build --no-cache -f Dockerfile-GCP -t MyCompany/cron:gcp .
+
+# Optional: specify the SDK version
+docker build --no-cache -f Dockerfile-GCP --build-arg CLOUD_SDK_VERSION=<release_number> -t MyCompany/cron:gcp .
 ```
 ```
 docker run -d \
